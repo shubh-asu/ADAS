@@ -1,0 +1,19 @@
+// Sets plugin to java
+plugins {
+    id("java")
+}
+
+// Specifies the source directory where the java files are present
+sourceSets {
+    main {
+        java {
+            srcDir("src/main/java")
+        }        
+    }
+}
+
+// Registers the main class i.e. CANSimulation
+tasks.register('run', JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "CANSimulation" 
+}
