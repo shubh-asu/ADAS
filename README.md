@@ -14,14 +14,15 @@ gradle run
 
 ## Files and Code Description
 
-*CAN Frames Info.txt* file describes the CANFrames which are parsed.
+***CAN Frames Info.txt*** file describes the CANFrames which are parsed.
+
 0018; By7Bi5-By6Bi0; 14 bit; Steering wheel angle; 3FFFh;  -2048 - +2047°;  0 - 8190; 0.5 ° (+ means clockwise)
 0F7A; By7Bi3-By6Bi0; 12 bit; Displayed vehicle speed; FFFh; 0 - 409.4 km/h; 0 - 4094; 0.1 km/h
 0B41; By7Bi7-By6Bi0; 16 bit; Vehicle yaw rate; FFFFh; -327.68 - +327.66 °/s; 0 - 65534; 0.01 °/s (+ means clockwise looking from above)
 0B41; By3Bi7-By3Bi0; 8 bit; Vehicle longitudinal acceleration (+ means forward); FFh; -10.24 - +10.08 m/s²; 0 - 254; 0.08 m/s²
 0B41; By2Bi7-By2Bi0; 8 bit; Vehicle lateral acceleration (+ means left); FFh; -10.24 - +10.08 m/s²; 0 - 254; 0.08 m/s²
 
-*18 CANmessages.trc* is the trace file containing the raw CAN bus data.
+***18 CANmessages.trc*** is the trace file containing the raw CAN bus data.
 
 **CANSimulation** is the main class that instantiates the traceParser and trace objects for parsing the CAN data present in the trace file and storing the decoded CAN frames messages in the trace object's vector collection.
 
